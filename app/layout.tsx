@@ -1,9 +1,7 @@
 import "./globals.css";
 import { siteConfig } from "@/data/site-config";
-import { Header } from "@/components/features/layout/header";
-import { Footer } from "@/components/features/layout/footer";
-import { ThemeProvider } from "@/context/theme-context";
 import { branding } from "@/data/branding";
+import { AnimatedLayout } from "@/components/layout/animated-layout";
 
 export const metadata = {
   title: siteConfig.name,
@@ -19,15 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-background text-foreground font-sans min-h-screen flex flex-col">
-        <ThemeProvider>
-          <Header />
-          <main className="grow">
-            <div className="mx-auto max-w-7xl px-4 py-6">{children}</div>
-          </main>
-          <Footer />
-        </ThemeProvider>
+    <html lang="en" className="scroll-smooth">
+      <body className="bg-background text-foreground font-sans min-h-screen flex flex-col transition-all duration-300">
+        <AnimatedLayout>{children}</AnimatedLayout>
       </body>
     </html>
   );
