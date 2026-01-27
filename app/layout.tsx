@@ -23,15 +23,9 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className="bg-background text-foreground font-sans min-h-screen flex flex-col">
         <Providers>
-          {/* Header animation */}
           <MotionSection direction="up">
             <Header />
-          </MotionSection>
-
-          {/* Page content */}
           <main className="grow mx-auto max-w-7xl px-4 py-6">{children}</main>
-
-          {/* Footer animation */}
           <MotionSection direction="down" delay={0.2}>
             <Footer />
           </MotionSection>
