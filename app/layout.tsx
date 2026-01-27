@@ -25,6 +25,7 @@ export default function RootLayout({
         <Providers>
           <MotionSection direction="up">
             <Header />
+          </MotionSection>
           <main className="grow mx-auto max-w-7xl px-4 py-6">{children}</main>
           <MotionSection direction="down" delay={0.2}>
             <Footer />
