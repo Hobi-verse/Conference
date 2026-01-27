@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { professionals } from "../_data/professionals";
 import { ProfessionalCard } from "./professional-card";
+import { Button } from "@/components/ui/button";
 
 export function ProfessionalGrid() {
   const [filter, setFilter] = useState<string>("all");
@@ -26,7 +27,7 @@ export function ProfessionalGrid() {
 
         {/* Filters */}
         <div className="mb-8 flex flex-wrap gap-3">
-          <button
+          <Button
             onClick={() => setFilter("all")}
             className={`border px-3 py-1 text-sm ${
               filter === "all"
@@ -35,10 +36,10 @@ export function ProfessionalGrid() {
             }`}
           >
             All
-          </button>
+          </Button>
 
           {designations.map((designation) => (
-            <button
+            <Button
               key={designation}
               onClick={() => setFilter(designation)}
               className={`border px-3 py-1 text-sm ${
@@ -48,7 +49,7 @@ export function ProfessionalGrid() {
               }`}
             >
               {designation}
-            </button>
+            </Button>
           ))}
         </div>
 

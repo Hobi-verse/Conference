@@ -2,12 +2,13 @@
 
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "@/context/theme-context";
+import { Button } from "./button";
 
 export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <button
+    <Button
       onClick={toggleTheme}
       aria-label="Toggle high contrast mode"
       className="flex items-center gap-2 border border-border px-3 py-1 text-sm"
@@ -17,6 +18,6 @@ export function ThemeToggle() {
       ) : (
         <Sun className="h-4 w-4" />
       )}
-    </button>
+    </Button>
   );
 }

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { Button } from "@/components/ui/button";
 import { branding } from "@/data/branding";
 import { navigation } from "@/data/navigation";
 
@@ -46,13 +47,13 @@ export function Header() {
           </nav>
 
           {/* Mobile Toggle */}
-          <button
+          <Button
             className="lg:hidden border border-border p-2"
             aria-label="Toggle navigation menu"
             onClick={() => setOpen(!open)}
           >
             {open ? <X size={18} /> : <Menu size={18} />}
-          </button>
+          </Button>
         </div>
 
         {/* Mobile / Tablet Menu */}
