@@ -1,4 +1,4 @@
-import { notices } from "@/data/notices";
+import { notices } from "../_data/notices";
 import { NoticeCard } from "./notice-card";
 
 export function NoticesList({ showTitle = true }: { showTitle?: boolean }) {

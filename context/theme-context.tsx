@@ -13,20 +13,33 @@ const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const stored = localStorage.getItem("theme") as Theme | null;
     if (stored) {
       setTheme(stored);
-      document.documentElement.classList.toggle("dark", stored === "dark");
+    } else {
+      // Check system preference
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light";
+      setTheme(systemTheme);
     }
   }, []);
+
+  useEffect(() => {
+    if (mounted) {
+      document.documentElement.classList.toggle("dark", theme === "dark");
+    }
+  }, [theme, mounted]);
 
   const toggleTheme = () => {
     const next = theme === "light" ? "dark" : "light";
     setTheme(next);
     localStorage.setItem("theme", next);
-    document.documentElement.classList.toggle("dark", next === "dark");
   };
 
   return (

@@ -1,4 +1,4 @@
-import { Notice } from "@/types";
+import { Notice } from "../_types";
 
 interface NoticeCardProps {
   notice: Notice;

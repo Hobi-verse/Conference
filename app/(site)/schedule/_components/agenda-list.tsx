@@ -1,4 +1,4 @@
-import { agenda } from "@/data/agenda";
+import { agenda } from "../_data/agenda";
 import { AgendaItemRow } from "./agenda-item";
 
 export function AgendaList() {

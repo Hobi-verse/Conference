@@ -1,4 +1,4 @@
-import { Branding } from '@/types'
+import { Branding } from '@/types/branding'
 
 export const branding: Branding = {
   logo: {

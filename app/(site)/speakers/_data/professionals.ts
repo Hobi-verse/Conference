@@ -1,4 +1,4 @@
-import { Professional } from '@/types'
+import { Professional } from '../_types'
 
 export const professionals: Professional[] = [
   {

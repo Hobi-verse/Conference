@@ -1,13 +1,22 @@
-import { Hero } from "@/components/features/hero/hero";
-import { ProfessionalGrid } from "@/components/features/professionals/professional-grid";
-import { NoticesList } from "@/components/features/notices/notices-list";
+import { Hero } from "@/components/layout/hero";
+import { ProfessionalGrid } from "./speakers/_components/professional-grid";
+import { NoticesList } from "./notices/_components/notices-list";
+import MotionSection from "@/components/layout/motion-section";
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <NoticesList />
-      <ProfessionalGrid />
+      <MotionSection direction="up">
+        <Hero />
+      </MotionSection>
+
+      <MotionSection direction="down" delay={0.2}>
+        <NoticesList />
+      </MotionSection>
+
+      <MotionSection direction="down" delay={0.4}>
+        <ProfessionalGrid />
+      </MotionSection>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { AgendaItem } from "@/types";
+import { AgendaItem } from "../_types";
 
 export function AgendaItemRow({ item }: { item: AgendaItem }) {
   return (

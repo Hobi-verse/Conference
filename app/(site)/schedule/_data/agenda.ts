@@ -1,4 +1,4 @@
-import { AgendaItem } from '@/types'
+import { AgendaItem } from '../_types'
 
 export const agenda: AgendaItem[] = [
   {

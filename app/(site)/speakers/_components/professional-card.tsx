@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Professional } from "@/types";
+import { Professional } from "../_types";
 
 interface ProfessionalCardProps {
   professional: Professional;

@@ -1,4 +1,4 @@
-import { SiteConfig } from '@/types'
+import { SiteConfig } from '@/types/branding'
 
 export const siteConfig: SiteConfig = {
   name: 'ICCS 2026',

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { professionals } from "@/data/professionals";
+import { professionals } from "../_data/professionals";
 import { ProfessionalCard } from "./professional-card";
 
 export function ProfessionalGrid() {
