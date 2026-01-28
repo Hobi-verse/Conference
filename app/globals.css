@@ -47,3 +47,31 @@
 
   --border: 0 0% 100%;
 }
+
+/* =========================
+   CONTENT TYPOGRAPHY SYSTEM
+   ========================= */
+
+.content {
+  line-height: 1.6;
+}
+
+.content p {
+  margin-top: 0.75rem;
+}
+
+.content p:first-child {
+  margin-top: 0;
+}
+
+.content h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 0.2;
+}
+
+.content h1,
+.content h2,
+.content h3 {
+  font-family: var(--font-serif);
+}

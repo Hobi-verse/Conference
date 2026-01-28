@@ -14,8 +14,8 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b border-border bg-card">
-      <div className="mx-auto max-w-7xl px-4">
+    <header className="border-b border-border bg-card ">
+      <div className="mx-auto max-w-7xl px-20">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">

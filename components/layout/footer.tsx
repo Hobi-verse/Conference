@@ -4,7 +4,7 @@ import { footerSections } from "@/data/footer";
 export function Footer() {
   return (
     <footer className="border-t border-border bg-secondary">
-      <div className="mx-auto max-w-7xl px-4 py-10">
+      <div className="mx-auto max-w-7xl px-20 py-10">
         <div className="grid gap-8 md:grid-cols-3">
           {footerSections.map((section) => (
             <section key={section.title}>
