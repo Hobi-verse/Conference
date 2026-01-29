@@ -15,7 +15,7 @@ export default function HomePage() {
         <AboutSection />
       </MotionSection>
 
-      <div className="mx-auto max-w-7xl px-20 py-10 space-y-16 ">
+      <div className="mx-auto max-w-7xl sm:px-10 lg:px-20 py-10 space-y-16 ">
         <MotionSection direction="down" delay={0.2}>
           <NoticesList />
         </MotionSection>

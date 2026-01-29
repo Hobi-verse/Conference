@@ -10,10 +10,10 @@ export function AboutSection() {
   const y = useTransform(scrollY, [0, 800], [0, 30]);
 
   return (
-    <section className="w-full bg-background text-foreground px-20 py-10">
+    <section className="w-full bg-background text-foreground lg:px-20 py-10">
       <motion.div style={{ y }} className="mx-auto max-w-7xl px-6">
         {/* Header */}
-        <header className=" max-w-3xl  mb-12 px-20">
+        <header className=" max-w-3xl  mb-12 lg:px-20">
           <h1 className="font-serif text-3xl md:text-4xl ">
             {aboutICCS.title}
           </h1>
@@ -24,7 +24,7 @@ export function AboutSection() {
         {/* Body */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-12 items-start ">
           {/* Text */}
-          <div className="content text-foreground/80 px-20 ">
+          <div className="content text-foreground/80 lg:px-20 ">
             {aboutICCS.description.map((para, idx) => (
               <p key={idx} className="text-sm">
                 {para}
@@ -60,7 +60,7 @@ export function AboutSection() {
         </div>
 
         {/* Sections full width */}
-        <div className="mt-12 px-20">
+        <div className="mt-12 sm:px-10 lg:px-20">
           {aboutICCS.sections.map((section) => (
             <div key={section.heading} className="mb-8">
               <h2 className="text-xl font-semibold mb-2 font-serif">
