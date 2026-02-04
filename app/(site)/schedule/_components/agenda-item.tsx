@@ -4,7 +4,14 @@ export function AgendaItemRow({ item }: { item: AgendaItem }) {
   return (
     <article className="border-b border-border py-4">
       <div className="flex flex-col md:flex-row md:items-center md:gap-6">
-        <span className="w-40 text-sm font-medium">{item.time}</span>
+        <div className="w-40">
+          {item.day && (
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              {item.day}
+            </p>
+          )}
+          <span className="text-sm font-medium">{item.time}</span>
+        </div>
 
         <div>
           <h3 className="font-serif text-base">{item.title}</h3>

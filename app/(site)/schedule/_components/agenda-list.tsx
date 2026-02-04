@@ -1,17 +1,28 @@
-import { agenda } from "../_data/agenda";
+import { paperPresentations, speakerSessions } from "../_data/agenda";
 import { AgendaItemRow } from "./agenda-item";
 
 export function AgendaList() {
   return (
-    <section className="py-12">
-      <div className="mx-auto max-w-5xl px-4">
-        <header className="mb-8">
-          <h1 className="font-serif text-3xl">Conference Agenda</h1>
-        </header>
-
-        {agenda.map((item) => (
-          <AgendaItemRow key={item.id} item={item} />
-        ))}
+    <section>
+      <div>
+        <div className="mt-4 grid gap-6 md:grid-cols-2">
+          <div className="border border-border bg-card p-5 shadow-sm">
+            <h2 className="font-serif text-lg">Speaker Session Detail</h2>
+            <div className="mt-4">
+              {speakerSessions.map((item) => (
+                <AgendaItemRow key={`speaker-${item.id}`} item={item} />
+              ))}
+            </div>
+          </div>
+          <div className="border border-border bg-card p-5 shadow-sm">
+            <h2 className="font-serif text-lg">Paper Presentation Detail</h2>
+            <div className="mt-4">
+              {paperPresentations.map((item) => (
+                <AgendaItemRow key={`paper-${item.id}`} item={item} />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

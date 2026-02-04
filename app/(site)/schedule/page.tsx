@@ -1,16 +1,11 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { AgendaList } from "./_components/agenda-list";
+import { ContentPageLayout } from "@/components/layout/content-page";
+import { scheduleContent } from "./_data/schedule";
 
 export default function AgendaPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
+    <ContentPageLayout data={scheduleContent}>
       <AgendaList />
-    </motion.div>
+    </ContentPageLayout>
   );
 }
