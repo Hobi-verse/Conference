@@ -6,7 +6,7 @@ export const siteConfig: SiteConfig = {
   description:
     'An official academic conference portal for institutional announcements and press releases.',
   image: {
-    src: "/assets/press/official-portrait.jpg",
+    src: "/assets/logo/Logo.png",
     alt: "Conference Official Logo"
   }
 }

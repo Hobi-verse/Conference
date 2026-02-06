@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { branding } from "@/data/branding";
 import { navigation } from "@/data/navigation";
@@ -14,7 +13,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b border-border bg-card ">
+    <header className="border-b border-border bg-card fixed w-full z-50">
       <div className="mx-auto max-w-7xl px-20">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
@@ -25,7 +24,7 @@ export function Header() {
               width={80}
               height={80}
               priority
-              className="w-24 h-24 md:w-36 md:h-36 object-contain"
+              className="w-16 h-16 object-contain"
             />
           </div>
 
@@ -43,7 +42,6 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <ThemeToggle />
           </nav>
 
           {/* Mobile Toggle */}
@@ -74,9 +72,6 @@ export function Header() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <ThemeToggle />
-              </li>
             </ul>
           </nav>
         )}

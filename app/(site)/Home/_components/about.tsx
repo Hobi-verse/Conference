@@ -10,7 +10,7 @@ export function AboutSection() {
   const y = useTransform(scrollY, [0, 800], [0, 30]);
 
   return (
-    <section className="w-full bg-background text-foreground lg:px-20 py-10">
+    <section className="w-[90%] mx-auto border-4 border-[#80786f] bg-background text-foreground lg:px-20 py-10 rounded-xl">
       <motion.div style={{ y }} className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <header className=" max-w-3xl  mb-12 lg:px-20">
