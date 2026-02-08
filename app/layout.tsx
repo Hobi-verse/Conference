@@ -4,6 +4,7 @@ import { branding } from "@/data/branding";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import MotionSection from "@/components/layout/motion-section";
+import BackgroundCursorEffect from "@/components/backgroundUtil/BackgroundCursorEffect";
 
 export const metadata = {
   title: siteConfig.name,
@@ -20,7 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth dark" suppressHydrationWarning>
-      <body className="bg-background text-foreground font-sans min-h-screen flex flex-col">
+      <body className="site-bg bg-background text-foreground font-sans min-h-screen flex flex-col">
+        <BackgroundCursorEffect />
         <MotionSection direction="up">
           <Header />
         </MotionSection>

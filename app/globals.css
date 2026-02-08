@@ -32,6 +32,48 @@
   --border: 32 7% 47%;
 }
 
+.site-bg {
+  background-image: url("/assets/logo/universityBg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+
+  --cursor-x: 40vw;
+  --cursor-y: 20vh;
+  --cursor-size: 320px;
+  --cursor-blur: 6px;
+}
+
+/* DARK OVERLAY + SMOOTH CURSOR BLEND */
+.site-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  /* dark base */
+  background: radial-gradient(
+    circle var(--cursor-size) at var(--cursor-x) var(--cursor-y),
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.15) 40%,
+    rgba(0, 0, 0, 0.45) 60%,
+    rgba(0, 0, 0, 0.85) 75%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+
+  backdrop-filter: blur(var(--cursor-blur));
+  transition: background 0.15s ease;
+}
+
+/* CONTENT ABOVE */
+.site-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
 /* =========================
    CONTENT TYPOGRAPHY SYSTEM
    ========================= */
